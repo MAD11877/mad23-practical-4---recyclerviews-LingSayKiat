@@ -1,22 +1,27 @@
-[![Review Assignment Due Date](https://classroom.github.com/assets/deadline-readme-button-24ddc0f5d75046c5622901739e7c5dd533143b0c8e959d652212380cedb1ea36.svg)](https://classroom.github.com/a/6M4EIOtf)
-# MAD Practical 4 - RecyclerView
-Continuing from last week, you will be adding RecyclerView to your app. <br/>
+[![Review Assignment Due Date](https://classroom.github.com/assets/deadline-readme-button-24ddc0f5d75046c5622901739e7c5dd533143b0c8e959d652212380cedb1ea36.svg)](https://classroom.github.com/a/LFiEPPgW)
+# MAD Practical 2 - Activity
+You will be creating your first Android app! Your app will have a profile page on its main Activity.<br/>
 Follow the instructions below to complete your app.
 
-1. Create a `List` of 20 `User` objects in the `ListActivity`. Randomize the `name`, `descriptions` and value of `followed`.
+1. Create a new project with the following configuration,
+    * Empty Activity
+    * Language: Java
+    * Minimum API level: API 21: Android 5.0 (Lollipop)
+2. Create a User class based on the class diagram below.
 
-2. Replace the `ImageView` in the `ListActivity` with a `RecyclerView`. Populate the `RecyclerView` with the list created in previous step.
+![User Class Diagram](/images/user_cd.png)
 
-![RecyclerView](/images/p4_rv.png)
+3. Create the layout of your main activity according to the figure shown below.
 
-3. Add an `onClickListener` for the image such that it will show an Alert Dialog with the corresponding name. Clicking on the view button will direct the user to the `MainActivity` to show the profile page. Toggling the `Follow` button should save the state back in the respective `User` object.
+![Screen Mockup](/images/screen_mock.png)
 
-Hint: You can use static variable. <br/>
-Using global static variable is not a good software engineering practice. Are you able to figure other ways of achieving these behaviours?
+4. In your onCreate method, the name and description are loaded from the User object. The button on the left will show “Follow” if the variable followed is false, and vice versa.
 
-![AlertDialog](/images/p4_alert.png)
-![Profile](/images/p4_profile.png)
+5.	When the left button is clicked, it will toggle the text between Follow and Unfollow. The variable followed is also updated to reflect this.
 
-4. Modify the RecyclerView such that if the last digit of the name contains 7, a different layout is used as shown below. This new layout will have an additional `ImageView` that occupies the width of the screen and has a width-to-height ratio of 1:1.
+# CHALLENGE
+6.	When the app is rotated, some of the UI components disappeared as shown in the figure below. Resolve this UI bug such that all components are visible regardless of the screen orientation.<br/><br/>Hint: ScrollView
 
-![RecylerView](/images/p4_rv2.png)
+![Horizontal Rotation](/images/Screenshot_1617792845.png)
+
+To submit your practical, remember to commit the changes and push to remote repository.
